@@ -1,4 +1,4 @@
-package com.abcbank.paymenthandling;
+package com.abcbank.paymenthandling.controller;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -14,9 +14,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.abcbank.paymenthandling.LoginController;
+import com.abcbank.paymenthandling.User;
+import com.abcbank.paymenthandling.UserRepository;
+
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
-public class UserRegistrationTest {
+public class UserRegistrationControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
@@ -46,6 +50,7 @@ public class UserRegistrationTest {
         mockMvc.perform(post("/api/register")
                         .param("username", "testuser")
                         .param("password", "password"))
-                .andExpect(status().isOk()); // Expect 200 OK response
+               .andExpect(status().isOk()); // Expect 200 OK response
+                //.andExpect(status().isCreated()); // Expect 201 Created
     }
 }
