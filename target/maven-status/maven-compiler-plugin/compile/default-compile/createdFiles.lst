@@ -1,0 +1,6 @@
+com/abcbank/paymenthandling/UserRepository.class
+com/abcbank/paymenthandling/PaymentHandlingServiceConfig.class
+com/abcbank/paymenthandling/PaymentHandlingService.class
+com/abcbank/paymenthandling/LoginController.class
+com/abcbank/paymenthandling/User.class
+com/abcbank/paymenthandling/UserRegistrationController.class
